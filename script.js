@@ -5,6 +5,9 @@ let stopButton = document.getElementById('stop');
 let resetButton = document.getElementById('reset');
 let labelButtons = document.querySelectorAll('.label');
 
+let alertContainer = document.getElementById('alert-container');
+let closeAlertButton = document.getElementById('close-alert');
+
 let timer;
 let isReverse = false;
 let totalTimeInSeconds = 0;
@@ -22,6 +25,7 @@ labelButtons.forEach(button => {
 startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
 resetButton.addEventListener('click', resetTimer);
+closeAlertButton.addEventListener('click', closeAlert);
 
 function startTimer() {
     clearInterval(timer);
@@ -31,9 +35,11 @@ function startTimer() {
                 totalTimeInSeconds--;
                 updateDisplay();
             } else {
+                isReverse = false;
                 clearInterval(timer);
                 alertSound.play();
-                alert('Time Expired')
+                // alert('Time Expired')
+                showAlert();
                 document.body.classList.add('alert');
             }
         } else {
@@ -56,7 +62,7 @@ function resetTimer() {
 
 function setFixedTimer() {
     isReverse = true;
-    totalTimeInSeconds = 60 * fixedTimeSet;
+    totalTimeInSeconds = 2 * fixedTimeSet;
     updateDisplay();
     document.body.classList.remove('alert');
     startTimer();
@@ -67,4 +73,13 @@ function updateDisplay() {
     let seconds = totalTimeInSeconds % 60;
     minutesDisplay.textContent = minutes < 10 ? '0' + minutes : minutes;
     secondsDisplay.textContent = seconds < 10 ? '0' + seconds : seconds;
+}
+
+function showAlert() {
+    alertContainer.style.display = 'flex';
+}
+
+function closeAlert() {
+    alertContainer.style.display = 'none';
+    document.body.classList.remove('alert');
 }

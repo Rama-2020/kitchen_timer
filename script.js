@@ -62,7 +62,7 @@ function resetTimer() {
 
 function setFixedTimer() {
     isReverse = true;
-    totalTimeInSeconds = 2 * fixedTimeSet;
+    totalTimeInSeconds = 60 * fixedTimeSet;
     updateDisplay();
     document.body.classList.remove('alert');
     startTimer();

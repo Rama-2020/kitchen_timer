@@ -2,6 +2,8 @@
 
 A simple kitchen timer web application built with HTML, CSS, and JavaScript. This timer allows you to set specific durations and will notify you with a visual and sound alert when the time expires. It also includes basic start, stop, and reset functionality.
 
+![Kitchen Timer Screenshot](./screenshots/screenshot_web_app.png)
+
 ## Features
 
 - **Set Timer**: Quickly set the timer for predefined durations (1 min, 5 min, 10 min, 15 min).
@@ -30,6 +32,11 @@ To run the kitchen timer application locally, follow these steps:
     ```
 
 2. Open `index.html` in your preferred web browser.
+
+## Live Version
+
+Check out the live version of the Kitchen Timer [here](https://rama-2020.github.io/kitchen_timer/).
+
 
 ## Files
 

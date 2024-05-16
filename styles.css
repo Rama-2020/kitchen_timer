@@ -103,3 +103,7 @@ h1 {
     background-color: #008CBA;
     color: white;
 }
+
+.alert {
+    background-color: #ff0000;
+}

@@ -48,3 +48,22 @@ h1 {
     background-color: #008CBA;
     color: white;
 }
+
+.labels {
+    margin-top: 20px;
+}
+
+.labels .label {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+.labels .label:hover {
+    background-color: #333;
+}
